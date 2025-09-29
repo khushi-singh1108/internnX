@@ -4,26 +4,21 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from './theme';
-import LoginPage from './pages/LoginPage.jsx';
-import NewRegister from './pages/NewRegister.jsx';
+import AuthPage from './pages/AuthPage.jsx';
 import DashboardPage from './pages/DashboardPage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
-import InternshipFormLite from './pages/InternshipFormLite.jsx';
+import InternshipForm from './pages/InternshipForm.jsx';
 import AppliedInternships from './pages/AppliedInternships.jsx';
 import './index.css';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <NewRegister />,
+    element: <AuthPage />,
   },
   {
-    path: '/register',
-    element: <NewRegister />,
-  },
-  {
-    path: '/login',
-    element: <LoginPage />,
+    path: '/auth',
+    element: <AuthPage />,
   },
   {
     path: '/dashboard',
@@ -35,7 +30,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/internship-form',
-    element: <InternshipFormLite />,
+    element: <InternshipForm />,
   },
   {
     path: '/applied-internships',

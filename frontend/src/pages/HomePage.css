@@ -51,7 +51,7 @@
 .hero-section {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #FFFFFF 100%);
+    background: #F9FAFB;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,9 +225,10 @@
 
 .hero-actions {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    animation: fadeUp 0.8s ease-in-out both;
 }
 
 .cta-primary {
@@ -265,6 +266,12 @@
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+/* Smooth entrance transitions */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .cta-secondary:hover {
@@ -1006,9 +1013,7 @@
     position: absolute;
 }
 
-.hero-section {
-    /* Hero section styles can go here if needed */
-}
+
 
 .progress-text {
     font-size: 1.5rem;

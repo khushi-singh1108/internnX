@@ -14,8 +14,8 @@ export default function HomePage() {
             <span className="logo-text">InternnX</span>
           </div>
           <div className="nav-buttons">
-            <button className="nav-btn" onClick={() => navigate('/')}>Home</button>
-            <button className="nav-btn" onClick={() => navigate('/dashboard')}>Dashboard</button>
+            <button className="nav-btn" onClick={() => navigate('/login')}>Login</button>
+            <button className="nav-btn" onClick={() => navigate('/register')}>Register</button>
           </div>
         </div>
       </nav>
@@ -25,7 +25,7 @@ export default function HomePage() {
         <div className="hero-container">
           <div className="hero-content">
             <h1 className="hero-title">AI-Powered Internship Matching</h1>
-            <p className="hero-subtitle">Find your perfect internship opportunity with our intelligent matching system</p>
+            <p className="hero-subtitle">Experience the future of internship recruitment with government-backed technology</p>
             
             <div className="hero-stats">
               <div className="stat-item">
@@ -42,9 +42,9 @@ export default function HomePage() {
               </div>
             </div>
 
+            {/* Removed the 'Find Your Match' primary CTA as requested */}
             <div className="hero-actions">
-              <button className="btn-primary" onClick={() => navigate('/match_form')}>Find Matches</button>
-              <button className="btn-secondary" onClick={() => navigate('/register')}>Register</button>
+              <button className="btn-secondary" onClick={() => navigate('/register')}>Join Now</button>
             </div>
           </div>
           
