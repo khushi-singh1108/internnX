@@ -1,0 +1,13 @@
+# requirements.txt
+fastapi
+uvicorn
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+pymongo
+python-dotenv
+pypdf>=3.0.0
+python-docx>=0.8.11
+spacy>=3.0.0
+scikit-learn>=1.0.0
+joblib>=1.1.0
