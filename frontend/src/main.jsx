@@ -1,48 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import theme from './theme';
-import AuthPage from './pages/AuthPage.jsx';
-import DashboardPage from './pages/DashboardPage.jsx';
-import ProfilePage from './pages/ProfilePage.jsx';
-import InternshipForm from './pages/InternshipForm.jsx';
-import AppliedInternships from './pages/AppliedInternships.jsx';
-import './index.css';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <AuthPage />,
-  },
-  {
-    path: '/auth',
-    element: <AuthPage />,
-  },
-  {
-    path: '/dashboard',
-    element: <DashboardPage />,
-  },
-  {
-    path: '/profile',
-    element: <ProfilePage />,
-  },
-  {
-    path: '/internship-form',
-    element: <InternshipForm />,
-  },
-  {
-    path: '/applied-internships',
-    element: <AppliedInternships />,
-  },
-]);
+import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './components/hooks/useAuth'; // Ensure this path is correct
+import App from './App';
+import './index.css'; // Make sure this line exists to import the CSS
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <RouterProvider router={router} />
-    </ThemeProvider>
-  </React.StrictMode>,
+    <BrowserRouter>
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 );
